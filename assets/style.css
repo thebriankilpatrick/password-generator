@@ -1,0 +1,93 @@
+.navbar {
+    text-align: center;
+}
+
+h1 {
+    color: #666666;
+}
+
+body {
+    background-color: rgb(248, 248, 248);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    border-radius: 25px; 
+    -moz-border-radius: 25px; 
+    -webkit-border-radius: 25px;
+}
+
+h2 {
+    color: #666666;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.textAreaBox {
+    min-width: 99%;
+    max-width: 99%;
+    min-height: 75px;
+    max-height: 75px;
+    text-align: center;
+}
+
+.buttonContainer {
+    border-top: 1px solid lightgrey;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+#generateButton {
+    margin-left: 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    background-color: #75cec9;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#copyButton {
+    float: right;
+    margin-right: 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    background-color: #adadad;
+    font-family: 'Quicksand', sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 450px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        width: 520px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 700px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        width: 900px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1000px;
+    }
+}
