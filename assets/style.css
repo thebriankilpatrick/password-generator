@@ -31,7 +31,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-.textAreaBox {
+#textAreaBox {
     min-width: 99%;
     max-width: 99%;
     min-height: 75px;
@@ -61,6 +61,8 @@ h2 {
     background-color: #adadad;
     font-family: 'Quicksand', sans-serif;
 }
+
+/* Media Queries for responsiveness */
 
 @media only screen and (max-width: 600px) {
     .container {
