@@ -51,6 +51,8 @@ h2 {
     border-radius: 25px;
     background-color: #75cec9;
     font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    outline: none;
 }
 
 #copyButton {
@@ -60,6 +62,8 @@ h2 {
     border-radius: 25px;
     background-color: #adadad;
     font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    outline: none;
 }
 
 /* Media Queries for responsiveness */

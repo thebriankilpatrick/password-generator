@@ -1,11 +1,28 @@
-var password = " ";
+
 var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-";
 var charactersLength = characters.length;
  
-function myFunction(length) {
+
+function generate(length) {
+    var password = "";
     for ( var i = 0; i < length; i++ ) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        console.log(password);
+        var x = Math.floor(Math.random() * characters.length);
+        password = password + characters.charAt(x);
     }
     return password;
 };
 
+
+function myFunction() {
+    generate(8); 
+    document.getElementById("textAreaBox").value = password;
+}
+
+// console.log(generate(8));
+
+function copy() {
+    let textarea = document.getElementById("textAreaBox");
+    textarea.select();
+    document.execCommand("copy");
+}
