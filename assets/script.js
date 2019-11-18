@@ -1,10 +1,10 @@
-
+var password = "";
 var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-";
 var charactersLength = characters.length;
  
 
 function generate(length) {
-    var password = "";
+    password = "";
     for ( var i = 0; i < length; i++ ) {
         console.log(password);
         var x = Math.floor(Math.random() * characters.length);
