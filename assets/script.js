@@ -1,25 +1,49 @@
 var password = "";
-var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-";
-var charactersLength = characters.length;
+var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lower = "abcdefghijklmnopqrstuvwxyz";
+var number = "0123456789";
+var special = "!@#$%^&*()_-";
+var ind = 0;
+var characterArray = [lower];
  
+var characterPrompt = prompt("How many characters does your password need to be?");
+var specialConfirm = confirm("Do you need special characters?");
+var uppercaseConfirm = confirm("Do you need uppercase letters?");
+var numberConfirm = confirm("Do you need numbers?");
+
+if (specialConfirm === true) {
+    characterArray.push(special);
+}
+
+if (uppercaseConfirm === true) {
+    characterArray.push(upper);
+}
+
+if (numberConfirm === true) {
+    characterArray.push(number);
+}
+
+console.log(characterArray);
 
 function generate(length) {
     password = "";
-    for ( var i = 0; i < length; i++ ) {
-        console.log(password);
-        var x = Math.floor(Math.random() * characters.length);
-        password = password + characters.charAt(x);
+    for (var i = 0; i < length; i++) {
+        var choice = characterArray.length;
+        var string = characterArray[ind];
+        var x = Math.floor(Math.random() * string.length);
+        password += characterArray[ind][x];
+        ind++; 
+        if (ind === choice) {
+            ind = 0;
+        }
     }
-    return password;
-};
+}
 
 
 function myFunction() {
-    generate(8); 
+    generate(characterPrompt); 
     document.getElementById("textAreaBox").value = password;
 }
-
-// console.log(generate(8));
 
 function copy() {
     let textarea = document.getElementById("textAreaBox");
