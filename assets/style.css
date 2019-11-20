@@ -37,6 +37,7 @@ h2 {
     min-height: 75px;
     max-height: 75px;
     text-align: center;
+    outline-color: #4aaaa5;
 }
 
 .buttonContainer {
