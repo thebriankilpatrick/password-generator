@@ -15,5 +15,5 @@ The user can also click the "Copy to Clipboard" button to copy the generated pas
 ![PasswordGeneratorSnip](https://user-images.githubusercontent.com/43326943/69401896-49d46100-0cc4-11ea-8258-90897f592b0d.PNG)
 
 ### Credits
-[W3Schools](https://www.w3schools.com)
+[W3Schools](https://www.w3schools.com)  
 [Stack Overflow](https://www.stackoverflow.com)
