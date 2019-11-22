@@ -31,6 +31,10 @@ h2 {
     margin-bottom: 10px;
 }
 
+.checks {
+    text-align: center;
+}
+
 #textAreaBox {
     min-width: 99%;
     max-width: 99%;

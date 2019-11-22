@@ -20,7 +20,12 @@
             <h2>Generate a Password</h2>
 
             <textarea id="textAreaBox" name="textBox" placeholder="Your Secure Password"></textarea>
-            
+            <div class="checks">
+                Symbols: <input type="checkbox" id="symbolCheck"/>
+                Uppercase Letters: <input type="checkbox" id="uppercaseCheck"/>
+                Numbers: <input type="checkbox" id="numberCheck"/>
+            </div>
+
             <div class="buttonContainer">
                 <button id="generateButton" onclick="myFunction()">Generate Password</button>
                 <button id="copyButton" onclick="copy()">Copy to Clipboard</button>
