@@ -4,7 +4,7 @@ var lower = "abcdefghijklmnopqrstuvwxyz";
 var number = "0123456789";
 var special = "!@#$%^&*()_-";
 var ind = 0;
-var characterArray = [lower]; 
+var characterArray = []; 
  
 var characterPrompt = prompt("How many characters does your password need to be?");
 
@@ -25,11 +25,21 @@ if (document.getElementById("numberCheck").checked === true) {
     characterArray.push(number);
 }
 
+if (document.getElementById("lowercaseCheck").checked === true) {
+    characterArray.push(lower);
+}
+
 }
 
 function generate(length) {
     reqCheck();  // Calls my function to check what checkboxes are clicked
     password = "";                        // This is to "reset" the function for each time it is called
+
+    if (characterArray.length === 0) {
+        alert("You need to choose the characters your password will consist of!");
+        return
+    }
+
     document.getElementById("copyButton").innerText = "Copy to Clipboard";
     for (var i = 0; i < length; i++) {
         var choice = characterArray.length;  // Declares "choice" as the length of the array
@@ -41,7 +51,7 @@ function generate(length) {
             ind = 0;
         }
     }
-    characterArray = [lower]; // Resets the array, as if no checkboxes are clicked
+    characterArray = []; // Resets the array, as if no checkboxes are clicked
 }
 
 // Calling my "generate" function
