@@ -5,8 +5,18 @@ var number = "0123456789";
 var special = "!@#$%^&*()_-";
 var ind = 0;
 var characterArray = []; 
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+console.log(slider);
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
  
-var characterPrompt = prompt("How many characters does your password need to be?");
+// var characterPrompt = prompt("How many characters does your password need to be?");
 
 console.log(characterArray);
 
@@ -34,6 +44,7 @@ if (document.getElementById("lowercaseCheck").checked === true) {
 function generate(length) {
     reqCheck();  // Calls my function to check what checkboxes are clicked
     password = "";                        // This is to "reset" the function for each time it is called
+    console.log(slider.value);
 
     if (characterArray.length === 0) {
         alert("You need to choose the characters your password will consist of!");
@@ -57,7 +68,7 @@ function generate(length) {
 // Calling my "generate" function
 
 function myFunction() {
-    generate(characterPrompt); 
+    generate(slider.value); 
     document.getElementById("textAreaBox").value = password;
 }
 
