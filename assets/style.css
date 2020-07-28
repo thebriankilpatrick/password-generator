@@ -60,6 +60,11 @@ h2 {
     outline: none;
 }
 
+#generateButton:hover {
+    transition: .5s;
+    background-color: #58a19e;
+}
+
 #copyButton {
     float: right;
     margin-right: 25px;
@@ -69,6 +74,11 @@ h2 {
     font-family: 'Quicksand', sans-serif;
     cursor: pointer;
     outline: none;
+}
+
+#copyButton:hover {
+    transition: .5s;
+    background-color: #929191;
 }
 
 .slidecontainer {
