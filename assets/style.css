@@ -1,5 +1,6 @@
-.navbar {
+.myNavbar {
     text-align: center;
+    margin-bottom: 50px;
 }
 
 h1 {
@@ -63,6 +64,14 @@ h2 {
 #generateButton:hover {
     transition: .5s;
     background-color: #58a19e;
+}
+
+.modal-title {
+    text-align: left !important;
+}
+
+#modalClose:hover {
+    color: rgb(98, 98, 238);
 }
 
 #copyButton {

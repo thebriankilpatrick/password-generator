@@ -5,19 +5,24 @@
             Password Generator
         </title>
         <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
         <link rel="stylesheet" type="text/css" href="assets/style.css"/>
         <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet"/>
     </head>
 
     <body>
 
-        <div class="navbar">
+        <div class="myNavbar">
             <h1>Password Generator</h1>
         </div>
 
         <div class="container">
 
-            <h2>Generate a Password</h2>
+            <h2 class="generateTitle">Generate a Password</h2>
 
             <textarea id="textAreaBox" name="textBox" placeholder="Your Secure Password"></textarea>
 
@@ -38,6 +43,25 @@
                 <button id="copyButton" onclick="copy()">Copy to Clipboard</button>
             </div>
             
+        </div>
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+          
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Uh Oh!</h4>
+                </div>
+                <div class="modal-body">
+                  <p>You need to specify what type of characters you want your password to consist of!</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="modalClose" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+          
+            </div>
         </div>
 
 

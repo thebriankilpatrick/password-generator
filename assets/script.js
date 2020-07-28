@@ -23,21 +23,21 @@ console.log(characterArray);
 // Function to check what checkboxes are clicked, and push the appropriate strings into the array
 
 function reqCheck() {
-if (document.getElementById("symbolCheck").checked === true) {
-    characterArray.push(special);
-}
+    if (document.getElementById("symbolCheck").checked === true) {
+        characterArray.push(special);
+    }
 
-if (document.getElementById("uppercaseCheck").checked === true) {
-    characterArray.push(upper);
-}
+    if (document.getElementById("uppercaseCheck").checked === true) {
+        characterArray.push(upper);
+    }
 
-if (document.getElementById("numberCheck").checked === true) {
-    characterArray.push(number);
-}
+    if (document.getElementById("numberCheck").checked === true) {
+        characterArray.push(number);
+    }
 
-if (document.getElementById("lowercaseCheck").checked === true) {
-    characterArray.push(lower);
-}
+    if (document.getElementById("lowercaseCheck").checked === true) {
+        characterArray.push(lower);
+    }
 
 }
 
@@ -47,7 +47,8 @@ function generate(length) {
     console.log(slider.value);
 
     if (characterArray.length === 0) {
-        alert("You need to choose the characters your password will consist of!");
+        console.log("Step one");
+        $("#myModal").modal();
         return
     }
 
